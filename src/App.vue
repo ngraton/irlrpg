@@ -2,13 +2,20 @@
   <div id="app">
     <div id="nav-bar">
       <router-link to="/" exact><img alt="logo" class="logo" src="./assets/logo.png"></router-link>
-      <router-link to="/alignment">alignment</router-link>
-      <router-link to="/stats">stats</router-link>
-      <router-link to="/skills">skills</router-link>
-      <router-link to="/quests">quests</router-link>
-      <router-link to="/inventory">inventory</router-link>
-      <router-link to="/bestiary">bestiary</router-link>
-      <router-link to="/codex">codex</router-link>
+      <div class="nav-box">
+        <div class="nav-links">
+          <router-link class="nav-link" to="/alignment">alignment</router-link>
+          <router-link class="nav-link" to="/stats">stats</router-link>
+          <router-link class="nav-link" to="/skills">skills</router-link>
+          <router-link class="nav-link" to="/quests">quests</router-link>
+        </div>
+        <div class="nav-links">
+          <router-link class="nav-link" to="/allies">quests</router-link>
+          <router-link class="nav-link" to="/inventory">inventory</router-link>
+          <router-link class="nav-link" to="/bestiary">bestiary</router-link>
+          <router-link class="nav-link" to="/codex">codex</router-link>
+        </div>
+      </div>
     </div>
     <router-view />
   </div>
@@ -30,6 +37,24 @@ export default {
     display: flex;
     justify-content: space-between;
     background-color: #1f1f1f;
+  }
+
+  .nav-box {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-grow: 1;
+    padding: 0 32px;
+    justify-content: space-between;
+  }
+
+  .nav-link {
+    align-self: center;
+    font-size: 32px;
   }
 
   .logo {

@@ -24,6 +24,8 @@ const router = new VueRouter({
   },{
     path:'/quests', component: Test
   },{
+    path:'/allies', component: Test
+  },{
     path:'/inventory', component: Test
   },{
     path:'/bestiary', component: Test
