@@ -3,7 +3,8 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 import HelloWorld from './components/HelloWorld.vue'
 import Test from './components/Test.vue'
-
+import Stats from './components/Stats.vue'
+import Alignment from './components/Alignment.vue'
 
 
 Vue.config.productionTip = false
@@ -16,9 +17,9 @@ const router = new VueRouter({
   routes: [{
     path: '/', component: HelloWorld 
   },{
-    path:'/alignment', component: Test
+    path:'/alignment', component: Alignment
   },{
-    path:'/stats', component: Test
+    path:'/stats', component: Stats
   },{
     path:'/skills', component: Test
   },{

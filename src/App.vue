@@ -10,7 +10,7 @@
           <router-link class="nav-link" to="/quests">quests</router-link>
         </div>
         <div class="nav-links">
-          <router-link class="nav-link" to="/allies">quests</router-link>
+          <router-link class="nav-link" to="/allies">allies</router-link>
           <router-link class="nav-link" to="/inventory">inventory</router-link>
           <router-link class="nav-link" to="/bestiary">bestiary</router-link>
           <router-link class="nav-link" to="/codex">codex</router-link>
