@@ -13,3 +13,10 @@ CREATE TABLE quest (
   FOREIGN KEY (hero_id) REFERENCES user (id)
 );
 
+CREATE TABLE objective (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  quest_id INTEGER NOT NULL,
+  description TEXT NOT NULL,
+  completed BOOLEAN NOT NULL,
+  FOREIGN KEY (quest_id) REFERENCES quest (id)
+);

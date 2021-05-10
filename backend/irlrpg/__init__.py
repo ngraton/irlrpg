@@ -22,11 +22,13 @@ def create_app(test_config=None):
     
     from . import (
         quest,
-        character
+        character,
+        objective
     )
     app.register_blueprint(quest.bp)
     app.register_blueprint(character.bp)
-    
+    app.register_blueprint(objective.bp)
+
     from . import db
     db.init_app(app)
 
