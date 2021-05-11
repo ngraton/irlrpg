@@ -1,14 +1,14 @@
 import functools
 
 from flask import (
-  Blueprint, flash, g, request, session
+  Blueprint, flash, g, request, session, jsonify
 )
 
 from . import db
 
 bp = Blueprint('quest', __name__ )
 
-@bp.route('/quests', methods=('GET', 'POST'))
+@bp.route('/quest', methods=('GET', 'POST'))
 def quest_return():
     quest_db = db.get_db()
     if request.method == 'POST':
@@ -29,7 +29,7 @@ def quest_return():
             return jsonify({'status': 'success'})
 
     quest = quest_db.execute(
-        'SELECT * FROM quest'
+        'SELECT * FROM quest WHERE hero_id = ?', (request.args['hero_id'],)
     ).fetchall()
 
     return jsonify(quest)
