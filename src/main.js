@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
-import HelloWorld from './components/HelloWorld.vue'
-import Test from './components/Test.vue'
-import Stats from './components/Stats.vue'
-import Alignment from './components/Alignment.vue'
-
+import HelloWorld from './components/pages/HelloWorld.vue'
+import Test from './components/pages/Test.vue'
+import Stats from './components/pages/Stats.vue'
+import Alignment from './components/pages/Alignment.vue'
+import Quests from './components/pages/Quests.vue'
 
 Vue.config.productionTip = false
 
@@ -23,7 +23,7 @@ const router = new VueRouter({
   },{
     path:'/skills', component: Test
   },{
-    path:'/quests', component: Test
+    path:'/quests', component: Quests
   },{
     path:'/allies', component: Test
   },{
